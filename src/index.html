@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyShop - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">MyShop</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <button id="searchBtn">Search</button>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="#">Deals</a>
+            <a href="orders.html">Orders</a>
+            <a href="cart.html" id="cartBtn">
+                Cart <span id="cartCount" class="cart-count">0</span>
+            </a>
+            <a href="login.html">Account</a>
+        </nav>
+    </header>
+
+    <!-- Company Intro & Highlights -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-info">
+                <h1>Welcome to MyShop</h1>
+                <p>MyShop is your one-stop destination for the latest Mobiles, Gadgets, and Home Accessories. We bring you top brands, unbeatable deals, and a seamless shopping experience. Trusted by thousands of happy customers, MyShop is committed to quality, fast delivery, and 24/7 support.</p>
+                <ul class="about-highlights">
+                    <li><span>🚚</span> Free & Fast Delivery</li>
+                    <li><span>🔒</span> Secure Payments</li>
+                    <li><span>⭐</span> 100% Genuine Products</li>
+                    <li><span>💬</span> 24/7 Customer Support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End Company Intro -->
+
+    <!-- Category Navigation -->
+    <nav id="categoryNav" class="category-nav">
+        <!-- Categories will be injected by JS -->
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="product-grid" id="productGrid">
+            <!-- Products will be injected by JS -->
+        </section>
+    </main>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img id="modalImg" src="" alt="">
+            <h2 id="modalTitle"></h2>
+            <p id="modalDesc"></p>
+            <div class="product-price" id="modalPrice"></div>
+            <button class="add-to-cart" id="modalAddToCart">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 MyShop. All rights reserved.</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>

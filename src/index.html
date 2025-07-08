@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>MyShop - Home</title>
+    <link rel="icon" type="image/jpeg" href="images/ms.jpg">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo">MyShop</div>
+        <a href="index.html" class="logo">MyShop</a>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
             <button id="searchBtn">Search</button>
@@ -47,17 +48,6 @@
             <!-- Products injected by JS -->
         </section>
     </main>
-
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <img id="modalImg" src="" alt="Product Image">
-            <h2 id="modalTitle"></h2>
-            <p id="modalDesc"></p>
-            <div class="product-price" id="modalPrice"></div>
-            <button class="add-to-cart" id="modalAddToCart">Add to Cart</button>
-        </div>
-    </div>
 
     <footer class="footer">
         <p>&copy; 2025 MyShop. All rights reserved.</p>

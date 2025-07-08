@@ -2,215 +2,218 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Product Details - MyShop</title>
+    <title>MyShop - Product Details</title>
+    <link rel="icon" type="image/jpeg" href="images/ms.jpg">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .product-details-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        .product-details {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .product-image-section {
-            text-align: center;
-        }
-        
-        .product-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .product-image:hover {
-            transform: scale(1.05);
-        }
-        
-        .product-info-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .product-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        
-        .product-category {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .product-price {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-        
-        .product-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 30px;
-        }
-        
-        .product-actions {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .add-to-cart-btn {
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-        
-        .add-to-cart-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        .back-btn {
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            text-align: center;
-        }
-        
-        .back-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(240, 147, 251, 0.4);
-        }
-        
-        .product-features {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        
-        .product-features h3 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-        .features-list {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .features-list li {
-            padding: 8px 0;
-            color: #555;
-            position: relative;
-            padding-left: 25px;
-        }
-        
-        .features-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-        }
-        
-        .breadcrumb {
-            margin-bottom: 20px;
-            color: #666;
-        }
-        
-        .breadcrumb a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .product-details {
-                grid-template-columns: 1fr;
-                gap: 20px;
-                padding: 20px;
-            }
-            
-            .product-title {
-                font-size: 2rem;
-            }
-            
-            .product-actions {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">MyShop</div>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search products...">
-            <button id="searchBtn">Search</button>
-        </div>
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="orders.html">Orders</a>
-            <a href="cart.html" id="cartBtn">
-                Cart <span id="cartCount" class="cart-count">0</span>
-            </a>
-            <a href="login.html">Account</a>
-        </nav>
-    </header>
+    <div class="page-container">
+        <header class="header">
+            <a href="index.html" class="logo">MyShop</a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products..." autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="orders.html">Orders</a>
+                <a href="cart.html" id="cartBtn">Cart <span id="cartCount" class="cart-count">0</span></a>
+                <a href="login.html">Account</a>
+            </nav>
+        </header>
 
-    <div class="product-details-container">
-        <div class="breadcrumb">
-            <a href="index.html">Home</a> > <span id="productBreadcrumb">Product</span>
-        </div>
-        
-        <div class="product-details" id="productDetails">
-            <!-- Product details will be populated by JavaScript -->
-        </div>
+        <main class="page-main">
+            <section class="product-detail-section" id="productDetailSection" style="max-width:900px;margin:30px auto;padding:0 8px;">
+                <!-- Product details injected by JS -->
+            </section>
+            <section id="relatedProductsSection" style="max-width:900px;margin:30px auto 0 auto;padding:0 8px;">
+                <!-- Related products injected by JS -->
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 MyShop. All rights reserved.</p>
+        </footer>
     </div>
 
-    <footer class="footer">
-        <p>&copy; 2025 MyShop. All rights reserved.</p>
-    </footer>
+    <script>
+    // Cart utilities (copied from app.js for standalone use)
+    function getCart() {
+      return JSON.parse(localStorage.getItem('cart') || '{}');
+    }
+    function setCart(cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    function updateCartCount() {
+      const cart = getCart();
+      const count = Object.values(cart).reduce((a, b) => a + b, 0);
+      const el = document.getElementById('cartCount');
+      if (el) {
+        el.textContent = count > 0 ? count : '';
+        el.style.display = count > 0 ? 'inline-block' : 'none';
+      }
+    }
+    function addToCart(id) {
+      const cart = getCart();
+      cart[id] = (cart[id] || 0) + 1;
+      setCart(cart);
+      updateCartCount();
+    }
 
-    <script src="js/product.js"></script>
+    // Get product ID from URL
+    function getProductIdFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return parseInt(params.get('id'), 10);
+    }
+
+    // Render product details
+    function renderProductDetail(product) {
+      const section = document.getElementById('productDetailSection');
+      if (!product) {
+        section.innerHTML = '<div style="text-align:center;padding:40px 0;font-size:1.2rem;color:#e74c3c;">Product not found.</div>';
+        return;
+      }
+      section.innerHTML = `
+        <div style="display:flex;flex-wrap:wrap;gap:32px;background:#fff;padding:24px 16px;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,0.09);align-items:center;">
+          <div style="flex:1 1 260px;min-width:220px;text-align:center;">
+            <img src="${product.image}" alt="${product.title}" style="width:220px;height:220px;object-fit:contain;border-radius:12px;background:#f8f9fa;padding:12px;box-shadow:0 2px 8px rgba(0,0,0,0.07);">
+          </div>
+          <div style="flex:2 1 320px;min-width:220px;">
+            <h1 style="font-size:2rem;font-weight:700;margin-bottom:10px;color:#2c3e50;">${product.title}</h1>
+            <div style="font-size:1.2rem;color:#e67e22;margin-bottom:8px;font-weight:600;">${product.category}</div>
+            <div style="font-size:1.5rem;color:#e74c3c;font-weight:700;margin-bottom:18px;">${product.price}</div>
+            <div style="font-size:1.1rem;color:#444;margin-bottom:18px;line-height:1.6;">${product.desc}</div>
+            <button class="add-to-cart" id="addToCartBtn" style="font-size:1.1rem;padding:10px 28px;">Add to Cart</button>
+            <div style="margin-top:18px;font-size:1.1rem;color:#f39c12;">
+              <span style="font-weight:700;">${product.rating ? product.rating.stars : '4.5'} ★</span>
+              <span style="color:#888;font-size:1rem;"> (${product.rating ? product.rating.count : '1,000'} ratings)</span>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;margin-top:24px;padding:20px 16px;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+          <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;color:#2c3e50;">Key Features</h2>
+          <ul style="margin:0 0 18px 0;padding-left:20px;font-size:1.05rem;color:#444;">
+            ${(product.features || []).map(f => `<li>${f}</li>`).join('')}
+          </ul>
+          <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;color:#2c3e50;">Technical Details</h2>
+          <table style="width:100%;max-width:500px;font-size:1rem;color:#444;border-collapse:collapse;">
+            <tbody>
+              ${(product.specs ? Object.entries(product.specs).map(([k,v]) => `<tr><td style='padding:6px 10px;font-weight:600;background:#f8f9fa;border-bottom:1px solid #eee;'>${k}</td><td style='padding:6px 10px;border-bottom:1px solid #eee;'>${v}</td></tr>`).join('') : '')}
+            </tbody>
+          </table>
+        </div>
+        <div style="background:#fff;margin-top:24px;padding:20px 16px;border-radius:14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+          <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:10px;color:#2c3e50;">Customer Reviews</h2>
+          <div style="font-size:1.1rem;color:#f39c12;font-weight:600;">${product.rating ? product.rating.stars : '4.5'} out of 5 stars</div>
+          <div style="color:#888;font-size:1rem;margin-bottom:10px;">${product.rating ? product.rating.count : '1,000'} global ratings</div>
+          <div style="color:#444;font-size:1rem;">Customers love the ${product.title.toLowerCase()} for its ${(product.features && product.features.length > 0) ? product.features[0].toLowerCase() : 'quality and value'}.</div>
+        </div>
+      `;
+      document.getElementById('addToCartBtn').onclick = function() { addToCart(product.id); };
+    }
+
+    // Render related products
+    function renderRelatedProducts(product, allProducts) {
+      const section = document.getElementById('relatedProductsSection');
+      if (!product) { section.innerHTML = ''; return; }
+      const related = allProducts.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+      if (related.length === 0) { section.innerHTML = ''; return; }
+      section.innerHTML = `
+        <h2 style="font-size:1.2rem;font-weight:700;margin:24px 0 12px 0;color:#2c3e50;">Related Products</h2>
+        <div class="product-grid">
+          ${related.map(p => `
+            <div class="product-card" onclick="window.location.href='product.html?id=${p.id}'">
+              <img src="${p.image}" alt="${p.title}">
+              <div class="product-title">${p.title}</div>
+              <div class="product-price">${p.price}</div>
+              <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(${p.id});">Add to Cart</button>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Search bar logic (reuse from app.js)
+    const products = JSON.parse(localStorage.getItem('productData') || '[]');
+    let searchQuery = "";
+    function renderProductsForSearch() { /* no-op for detail page */ }
+    function showSearchSuggestions(query) {
+      let dropdown = document.getElementById('searchDropdown');
+      if (!dropdown) {
+        dropdown = document.createElement('div');
+        dropdown.id = 'searchDropdown';
+        dropdown.className = 'search-dropdown';
+        const searchBar = document.querySelector('.search-bar');
+        if (searchBar) {
+          searchBar.style.position = 'relative';
+          searchBar.appendChild(dropdown);
+        }
+      }
+      if (!query.trim()) { dropdown.style.display = 'none'; return; }
+      const q = query.toLowerCase();
+      const suggestions = products.filter(p =>
+        p.title.toLowerCase().includes(q) ||
+        p.category.toLowerCase().includes(q) ||
+        p.desc.toLowerCase().includes(q)
+      ).slice(0, 8);
+      if (suggestions.length === 0) { dropdown.style.display = 'none'; return; }
+      dropdown.innerHTML = '';
+      suggestions.forEach(product => {
+        const item = document.createElement('div');
+        item.className = 'search-suggestion';
+        item.innerHTML = `
+          <img src="${product.image}" alt="${product.title}" style="width:40px;height:40px;object-fit:cover;border-radius:4px;">
+          <div>
+            <div style="font-weight:500;color:#000;">${product.title}</div>
+            <div style="font-size:12px;color:#666;">${product.category} • ${product.price}</div>
+          </div>
+        `;
+        item.onclick = () => { window.location.href = `product.html?id=${product.id}`; };
+        item.onmouseenter = () => { item.style.background = '#f8f9fa'; };
+        item.onmouseleave = () => { item.style.background = 'white'; };
+        dropdown.appendChild(item);
+      });
+      dropdown.style.display = 'block';
+    }
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    if (searchInput && searchBtn) {
+      function handleSearchSubmit() {
+        searchQuery = searchInput.value.trim();
+        showSearchSuggestions(searchQuery);
+      }
+      searchInput.oninput = e => {
+        searchQuery = e.target.value;
+        showSearchSuggestions(searchQuery);
+      };
+      searchInput.onfocus = e => {
+        if (searchInput.value.trim()) showSearchSuggestions(searchInput.value);
+      };
+      searchInput.onblur = () => {
+        setTimeout(() => {
+          const dropdown = document.getElementById('searchDropdown');
+          if (dropdown) dropdown.style.display = 'none';
+        }, 200);
+      };
+      searchBtn.onclick = handleSearchSubmit;
+      searchInput.addEventListener('keypress', e => {
+        if (e.key === 'Enter') handleSearchSubmit();
+      });
+    }
+    document.addEventListener('click', e => {
+      const searchBar = document.querySelector('.search-bar');
+      const dropdown = document.getElementById('searchDropdown');
+      if (dropdown && searchBar && !searchBar.contains(e.target)) {
+        dropdown.style.display = 'none';
+      }
+    });
+
+    // Init
+    updateCartCount();
+    const productId = getProductIdFromUrl();
+    const product = products.find(p => p.id === productId);
+    renderProductDetail(product);
+    renderRelatedProducts(product, products);
+    </script>
 </body>
 </html> 
